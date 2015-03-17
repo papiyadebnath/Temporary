@@ -1,0 +1,50 @@
+2014-11-27 15:19:52,776 - Log4JLogChute initialized using file 'velocity.log'
+2014-11-27 15:19:52,776 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2014-11-27 15:19:52,776 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-11-27 15:19:52,776 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-11-27 15:19:52,777 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at com.deere.content.Velocity.<init>(Velocity.java:14)
+	at com.deere.client.MyAssignment.getBody(MyAssignment.java:66)
+	at com.deere.client.MyAssignment.main(MyAssignment.java:35)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 13 more
+2014-11-27 15:19:52,781 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-11-27 15:19:52,781 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-11-27 15:19:52,782 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-11-27 15:19:52,784 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-11-27 15:19:52,784 - Do unicode file recognition:  false
+2014-11-27 15:19:52,784 - FileResourceLoader : adding path '.'
+2014-11-27 15:19:52,790 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-11-27 15:19:52,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-11-27 15:19:52,791 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-11-27 15:19:52,792 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-11-27 15:19:52,792 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-11-27 15:19:52,793 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-11-27 15:19:52,807 - Created '20' parsers.
+2014-11-27 15:19:52,810 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-11-27 15:19:52,810 - Velocimacro : Default library not found.
+2014-11-27 15:19:52,810 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-11-27 15:19:52,810 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-11-27 15:19:52,810 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-11-27 15:19:52,810 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-11-27 15:19:52,815 - ResourceManager : found /velocity-templates/email-body.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-11-27 15:20:02,125 - ResourceManager : found /velocity-templates/email-body.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-11-27 15:20:11,244 - ResourceManager : found /velocity-templates/email-body.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
